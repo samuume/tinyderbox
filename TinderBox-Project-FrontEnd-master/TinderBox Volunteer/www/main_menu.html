@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css"  media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/main_menu.css"  media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.6.3/css/font-awesome.min.css"  media="all"/>
+
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/authentication.js"></script>
+    <script type="text/javascript" src="js/backbutton.js"></script>
+    <script type="text/javascript" src="js/hidestatus.js"></script>
+    <script type="text/javascript" src="js/main_menu.js"></script>
+</head>
+<body onload="onLoad()">
+<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+    <div data-role="header" data-theme="a">
+    <h1>Logout?</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <h3 class="ui-title">Are you sure you want to logout?</h3>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow" onClick="logout()">Logout</a>
+    </div>
+</div>
+<div id="page_menu" data-role="page">
+    <div id="language">
+        DANSK
+    </div>
+    <div id="logout" onclick="logout()">
+        LOGOUT
+    </div>
+    <div id="page_menu_header" data-role="header">
+        <div id="app_logo"></div> 
+    </div><!-- /header -->
+
+    <div id="page_menu_content" role="main" class="ui-content">
+        <a href="shift.html" rel="external" class="menu_button float_left ui-btn ui-btn-inline"><span class="fa fa-3x fa-calendar"></span><p>Schedule</p></a>
+        <a href="#" rel="external" class="menu_button float_right ui-btn ui-btn-inline"><p class="info">Next shift: 4h 38m</p><p class="info">Time to ticket: 16h</p></a>
+        <a href="map.html" rel="external" class="menu_button menu_button_inner float_left ui-btn ui-btn-inline"><span class="fa fa-3x fa-map-marker"></span><p>Map</p></a>
+        <a href="contact.html" rel="external" class="menu_button menu_button_inner float_right ui-btn ui-btn-inline"><span class="fa fa-3x fa-phone"></span><p>Contact</p></a>
+        <a href="announcement.html" rel="external" class="menu_button menu_button_inner float_left ui-btn ui-btn-inline"><span class="fa fa-3x fa-bullhorn"></span><p>Announcements</p></a>
+        <a href="trademarket.html" rel="external" class="menu_button menu_button_inner float_right ui-btn ui-btn-inline"><span class="fa fa-3x fa-exchange"></span><p>Trademarket</p></a>
+        <a href="information.html" rel="external" class="menu_button menu_button_inner float_left ui-btn ui-btn-inline"><span class="fa fa-3x fa-info-circle"></span><p>INFO</p></a>
+        <a href="faq.html" rel="external" class="menu_button menu_button_inner float_right ui-btn ui-btn-inline"><span class="fa fa-3x fa-question-circle"></span><p>FAQ</p></a>
+    </div><!-- /content -->
+    <!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
